@@ -43,6 +43,7 @@
     }
   },
   "scripts": {
+    "compile-run": "npm run compile",
     "vscode:prepublish": "npm run esbuild-base -- --minify",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
