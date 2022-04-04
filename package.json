@@ -2,7 +2,7 @@
   "name": "zoomer",
   "displayName": "zoomer",
   "description": "zoomer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "anthonyattard",
   "engines": {
     "vscode": "^1.46.0"
