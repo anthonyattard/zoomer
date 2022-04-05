@@ -5,7 +5,7 @@
   "version": "0.0.4",
   "publisher": "anthonyattard",
   "engines": {
-    "vscode": "^1.46.0"
+    "vscode": "^1.65.0"
   },
   "activationEvents": [
     "onCommand:zoomer.zoomIns",
