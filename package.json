@@ -23,7 +23,25 @@
     "Other"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/anthonyattard/zoomer",
+  "bugs": {
+    "url": "https://github.com/anthonyattard/zoomer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonyattard/zoomer"
+  },
   "main": "./out/extension.js",
+  "qna": "https://github.com/anthonyattard/zoomer/discussions/categories/q-a",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "icon": "img/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
   "contributes": {
     "commands": [
       {
