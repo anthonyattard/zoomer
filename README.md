@@ -29,6 +29,5 @@ Head to Zoomer settings in Code and set your custom zoom factor!
 ### Publishing
 
 1. `npm install -g vsce`
-2. `vsce publish minor`
-3. `vsce package`
-4. `vsce publish`
+2. `vsce package`
+3. `vsce publish` or `vsce publish minor`
