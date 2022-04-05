@@ -39,7 +39,7 @@
           "description": "Zoom level value when incrementing/decrementing (can accept decimals)"
         }
       },
-      "title": "Code Settings, Custom Window Zoom Settings"
+      "title": "Zoomer Zoom Settings"
     }
   },
   "scripts": {
