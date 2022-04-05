@@ -3,10 +3,6 @@ import * as vscode from "vscode";
 export function activate(context: vscode.ExtensionContext) {
   console.log("Zoomer Activated");
 
-  let disposable = vscode.commands.registerCommand("zoomer.helloWorld", () => {
-    vscode.window.showInformationMessage("Hello from zoomer!");
-  });
-
   let zoomIns = vscode.commands.registerCommand("zoomer.zoomIns", () => {
     // vscode.window.showInformationMessage("zoomIns");
     const customLevel: any = vscode.workspace
@@ -37,7 +33,6 @@ export function activate(context: vscode.ExtensionContext) {
       .update("window.zoomLevel", parseFloat(total.toFixed(2)), true);
   });
 
-  context.subscriptions.push(disposable);
   context.subscriptions.push(zoomIns);
   context.subscriptions.push(zoomOuts);
 }

@@ -7,22 +7,25 @@
   "engines": {
     "vscode": "^1.46.0"
   },
-  "categories": [
-    "Other"
-  ],
   "activationEvents": [
-    "onCommand:zoomer.helloWorld",
     "onCommand:zoomer.zoomIns",
     "onCommand:zoomer.zoomOuts"
+  ],
+  "keywords": [
+    "zoom",
+    "text size",
+    "font",
+    "productivity"
+  ],
+  "categories": [
+    "Linters",
+    "Formatters",
+    "Other"
   ],
   "license": "MIT",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "zoomer.helloWorld",
-        "title": "Hello World"
-      },
       {
         "command": "zoomer.zoomIns",
         "title": "zoomer.zoomIns"
