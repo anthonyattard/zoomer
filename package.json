@@ -1,7 +1,7 @@
 {
   "name": "zoomer",
-  "displayName": "zoomer",
-  "description": "zoomer",
+  "displayName": "Zoomer",
+  "description": "Finely tune your zoom levels to get the prefect sized text",
   "version": "0.0.4",
   "publisher": "anthonyattard",
   "engines": {
