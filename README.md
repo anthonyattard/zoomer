@@ -12,13 +12,19 @@ I built this since I was frustrated with not being able to get the perfect text 
 
 ## Usage
 
-### Shortcuts
+### Keybindings
 
-Mac `Command` `+` or `-`
+Zoom In:
 
-Windows `Control+` `+` or `-`
+- Mac `Command` + `=`
+- Windows `Control` + `=`
+- Linux `Control` + `=`
 
-Linux `Command+` `+` or `-`
+Zoom Out:
+
+- Mac `Command` + `-`
+- Windows `Control` + `-`
+- Linux `Control` + `-`
 
 ### Settings
 
@@ -28,6 +34,11 @@ Head to Zoomer settings in Code and set your custom zoom factor!
 
 ### Publishing
 
-1. `npm install -g vsce`
-2. `vsce package`
-3. `vsce publish` or `vsce publish minor`
+- Ensure vsce is installed globally `npm install -g vsce`
+
+- To build vsix (local only): `vsce package`
+
+- To Publish:
+  - Major `vsce publish major`
+  - Minor `vsce publish minor`
+  - Patch `vsce publish patch`
