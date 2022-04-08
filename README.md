@@ -8,7 +8,7 @@ I built this since I was frustrated with not being able to get the perfect text 
 
 ## Demo
 
-![alt tag](https://github.com/anthonyattard/zoomer/blob/master/img/zoomer-demo.gif)
+![demo](https://raw.githubusercontent.com/anthonyattard/zoomer/master/img/zoomer-demo.gif)
 
 ## Usage
 
@@ -24,7 +24,7 @@ Linux `Command+` `+` or `-`
 
 Head to Zoomer settings in Code and set your custom zoom factor!
 
-![alt tag](https://github.com/anthonyattard/zoomer/raw/master/img/zoomer-settings.png)
+![settings](https://raw.githubusercontent.com/anthonyattard/zoomer/master/img/zoomer-settings.png)
 
 ### Publishing
 
