@@ -53,6 +53,18 @@
         "title": "zoomer.zoomOuts"
       }
     ],
+    "keybindings": [
+      {
+        "command": "zoomer.zoomIns",
+        "key": "ctrl+=",
+        "mac": "cmd+="
+      },
+      {
+        "command": "zoomer.zoomOuts",
+        "key": "ctrl+-",
+        "mac": "cmd+-"
+      }
+    ],
     "configuration": {
       "properties": {
         "zoomer.zoomIncrement": {
