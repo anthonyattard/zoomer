@@ -5,7 +5,7 @@
   "version": "0.2.1",
   "publisher": "anthonyattard",
   "engines": {
-    "vscode": "^1.65.0"
+    "vscode": "^1.73.0"
   },
   "activationEvents": [
     "onCommand:zoomer.zoomIns",
@@ -92,7 +92,7 @@
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "18.11.9",
-    "@types/vscode": "^1.81.0",
+    "@types/vscode": "^1.73.0",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "esbuild": "^0.19.2",
