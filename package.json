@@ -2,7 +2,7 @@
   "name": "zoomer",
   "displayName": "Zoomer",
   "description": "Finely tune your zoom levels to get the perfectly sized text",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "publisher": "anthonyattard",
   "engines": {
     "vscode": "^1.65.0"
