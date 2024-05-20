@@ -60,9 +60,19 @@
         "mac": "cmd+="
       },
       {
+        "command": "zoomer.zoomIns",
+        "key": "ctrl+numpad_add",
+        "mac": "cmd+numpad_add"
+      },
+      {
         "command": "zoomer.zoomOuts",
         "key": "ctrl+-",
         "mac": "cmd+-"
+      },
+      {
+        "command": "zoomer.zoomOuts",
+        "key": "ctrl+numpad_subtract",
+        "mac": "cmd+numpad_subtract"
       }
     ],
     "configuration": {
