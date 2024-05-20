@@ -26,6 +26,20 @@ Zoom Out:
 - Windows `Control` + `-`
 - Linux `Control` + `-`
 
+Also works with numpad.
+
+Zoom In:
+
+- Mac `Command` + `numpad_add`
+- Windows `Control` + `numpad_add`
+- Linux `Control` + `numpad_add`
+
+Zoom Out:
+
+- Mac `Command` + `numpad_subtract`
+- Windows `Control` + `numpad_subtract`
+- Linux `Control` + `numpad_subtract`
+
 ### Settings
 
 Head to Zoomer settings in Code and set your custom zoom factor!
