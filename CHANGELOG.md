@@ -4,7 +4,11 @@ All notable changes to the "zoomer" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.3.0]
+## [0.3.0] 2024-05-19
+
+- Update .gitignore
+
+- Update changelog
 
 ### Security
 
@@ -24,24 +28,24 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
   - `semver` from 7.3.5 to 7.5.4
   - `word-wrap` from 1.2.3 to 1.2.5
 
-## [0.2.3]
+## [0.2.3] 2023-08-22
 
 - No changes outside of version bump
 
-## [0.2.2]
+## [0.2.2] 2023-08-22
 
 - Fix typo in package descriptiongst
 
-## [0.2.1]
+## [0.2.1] 2022-04-08
 
 - Add keybinds
 
-## [0.2.0]
+## [0.2.0] - 2022-04-08
 
 - Make extension icon transparent
 
 - Update README
 
-## [0.1.0]
+## [0.1.0] - 2022-04-05
 
 - Initial release
