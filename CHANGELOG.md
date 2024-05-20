@@ -4,6 +4,22 @@ All notable changes to the "zoomer" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.1] 2024-05-20
+
+- Add support for Numpad
+
+Zoom In:
+
+- Mac `Command` + `numpad_add`
+- Windows `Control` + `numpad_add`
+- Linux `Control` + `numpad_add`
+
+Zoom Out:
+
+- Mac `Command` + `numpad_subtract`
+- Windows `Control` + `numpad_subtract`
+- Linux `Control` + `numpad_subtract`
+
 ## [0.3.0] 2024-05-19
 
 - Update .gitignore

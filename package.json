@@ -2,7 +2,7 @@
   "name": "zoomer",
   "displayName": "Zoomer",
   "description": "Finely tune your zoom levels to get the perfectly sized text",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "publisher": "anthonyattard",
   "engines": {
     "vscode": "^1.65.0"
@@ -60,9 +60,19 @@
         "mac": "cmd+="
       },
       {
+        "command": "zoomer.zoomIns",
+        "key": "ctrl+numpad_add",
+        "mac": "cmd+numpad_add"
+      },
+      {
         "command": "zoomer.zoomOuts",
         "key": "ctrl+-",
         "mac": "cmd+-"
+      },
+      {
+        "command": "zoomer.zoomOuts",
+        "key": "ctrl+numpad_subtract",
+        "mac": "cmd+numpad_subtract"
       }
     ],
     "configuration": {
