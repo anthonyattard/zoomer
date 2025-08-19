@@ -5,13 +5,8 @@
   "version": "0.3.3",
   "publisher": "anthonyattard",
   "engines": {
-    "vscode": "^1.65.0"
+    "vscode": "^1.75.0"
   },
-  "activationEvents": [
-    "onCommand:zoomer.zoomIns",
-    "onCommand:zoomer.zoomOuts",
-    "onCommand:zoomer.zoomReset"
-  ],
   "keywords": [
     "zoom",
     "text size",
