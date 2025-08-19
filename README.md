@@ -48,11 +48,9 @@ Head to Zoomer settings in Code and set your custom zoom factor!
 
 ### Publishing
 
-- Ensure vsce is installed globally `npm install -g vsce`
-
-- To build vsix (local only): `vsce package`
+- To build vsix (local only): `pnpx @vscode/vsce package`
 
 - To Publish:
-  - Major `vsce publish major`
-  - Minor `vsce publish minor`
-  - Patch `vsce publish patch`
+  - Major `pnpx @vscode/vsce publish major`
+  - Minor `pnpx @vscode/vsce publish minor`
+  - Patch `pnpx @vscode/vsce publish patch`
