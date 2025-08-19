@@ -60,9 +60,9 @@ Head to Zoomer settings in Code and set your custom zoom factor!
 
 ### Publishing
 
-- To build vsix (local only): `pnpx @vscode/vsce package`
+- To build vsix (local only): `pnpm dlx @vscode/vsce package`
 
 - To Publish:
-  - Major `pnpx @vscode/vsce publish major`
-  - Minor `pnpx @vscode/vsce publish minor`
-  - Patch `pnpx @vscode/vsce publish patch`
+  - Major `pnpm dlx @vscode/vsce publish major`
+  - Minor `pnpm dlx @vscode/vsce publish minor`
+  - Patch `pnpm dlx @vscode/vsce publish patch`
