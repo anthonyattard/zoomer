@@ -4,6 +4,11 @@ All notable changes to the "zoomer" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.4] 2025-08-19
+
+- Update deps
+- Implement pnpm
+
 ## [0.3.3] 2025-08-19
 
 - Fix [Issue #10](https://github.com/anthonyattard/zoomer/issues/10) Fixes zoom reset keybinds
