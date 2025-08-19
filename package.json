@@ -97,13 +97,16 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run esbuild --minify",
+    "vscode:prepublish": "pnpm run esbuild-base --minify",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
-    "esbuild": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --sourcemap",
-    "esbuild-watch": "pnpm run esbuild --watch"
+    "test-compile": "tsc -p ./",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "pnpm run esbuild-base --sourcemap",
+    "esbuild-watch": "pnpm run esbuild-base --sourcemap --watch"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
