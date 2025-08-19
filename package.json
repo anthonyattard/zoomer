@@ -109,7 +109,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "test-compile": "tsc -p ./",
-    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
     "esbuild": "npm run esbuild-base -- --sourcemap",
     "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch"
   },
@@ -120,10 +120,10 @@
     "@types/vscode": "^1.46.0",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
-    "esbuild": "^0.14.31",
+    "esbuild": "^0.25.9",
     "eslint": "^7.15.0",
     "glob": "^7.1.6",
-    "mocha": "^9.2.2",
+    "mocha": "^11.7.1",
     "typescript": "^4.1.2",
     "vscode-test": "^1.4.1"
   }
