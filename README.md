@@ -26,6 +26,12 @@ Zoom Out:
 - Windows `Control` + `-`
 - Linux `Control` + `-`
 
+Reset Zoom:
+
+- Mac `Command` + `0`
+- Windows `Control` + `0`
+- Linux `Control` + `0`
+
 Also works with numpad.
 
 Zoom In:
@@ -39,6 +45,12 @@ Zoom Out:
 - Mac `Command` + `numpad_subtract`
 - Windows `Control` + `numpad_subtract`
 - Linux `Control` + `numpad_subtract`
+
+Reset Zoom:
+
+- Mac `Command` + `numpad0`
+- Windows `Control` + `numpad0`
+- Linux `Control` + `numpad0`
 
 ### Settings
 
