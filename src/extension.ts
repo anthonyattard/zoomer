@@ -33,8 +33,16 @@ export function activate(context: vscode.ExtensionContext) {
       .update("window.zoomLevel", parseFloat(total.toFixed(2)), true);
   });
 
+  const zoomReset = vscode.commands.registerCommand("zoomer.zoomReset", () => {
+    // Reset zoom level to default (0)
+    vscode.workspace
+      .getConfiguration("")
+      .update("window.zoomLevel", 0, true);
+  });
+
   context.subscriptions.push(zoomIns);
   context.subscriptions.push(zoomOuts);
+  context.subscriptions.push(zoomReset);
 }
 
 export function deactivate() {}
