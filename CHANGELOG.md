@@ -4,6 +4,19 @@ All notable changes to the "zoomer" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.3] 2025-08-19
+
+- Fix [Issue #10](https://github.com/anthonyattard/zoomer/issues/10) Fixes zoom reset keybinds
+
+Zoom Reset:
+
+- Mac `Command` + `0`
+- Windows `Control` + `0`
+- Linux `Control` + `0`
+- Mac `Command` + `numpad0`
+- Windows `Control` + `numpad0`
+- Linux `Control` + `numpad0`
+
 ## [0.3.1] 2024-05-20
 
 - Add support for Numpad
