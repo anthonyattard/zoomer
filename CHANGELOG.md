@@ -4,7 +4,7 @@ All notable changes to the "zoomer" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.3.5] 2026-10-02
+## [0.3.6] 2026-10-02
 
 - Update deps
 
