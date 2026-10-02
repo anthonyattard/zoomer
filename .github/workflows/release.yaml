@@ -1,0 +1,115 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      vsix: ${{ steps.version.outputs.vsix }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Check tag matches package.json version
+        id: version
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $version"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "vsix=zoomer-$version.vsix" >> "$GITHUB_OUTPUT"
+
+      - run: pnpm install --frozen-lockfile
+
+      # Dependencies are bundled by esbuild, so vsce doesn't need to resolve them.
+      - run: pnpm dlx @vscode/vsce@4 package --no-dependencies --out ${{ steps.version.outputs.vsix }}
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: vsix
+          path: ${{ steps.version.outputs.vsix }}
+          if-no-files-found: error
+
+  publish-vscode:
+    needs: package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: vsix
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - run: npx -y @vscode/vsce@4 publish --packagePath ${{ needs.package.outputs.vsix }} --skip-duplicate
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+  publish-openvsx:
+    needs: package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: vsix
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - run: npx -y ovsx@1 publish --packagePath ${{ needs.package.outputs.vsix }} --skip-duplicate
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+
+  github-release:
+    needs: [package, publish-vscode, publish-openvsx]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: vsix
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.package.outputs.version }}
+          VSIX: ${{ needs.package.outputs.vsix }}
+        run: |
+          # Use this version's section of CHANGELOG.md as the release notes.
+          awk -v heading="## [$VERSION]" '
+            /^## / { if (found) exit; if (index($0, heading) == 1) { found = 1; next } }
+            found { print }
+          ' CHANGELOG.md > notes.md
+
+          if [ -s notes.md ]; then
+            gh release create "$GITHUB_REF_NAME" "$VSIX" --title "$GITHUB_REF_NAME" --notes-file notes.md
+          else
+            gh release create "$GITHUB_REF_NAME" "$VSIX" --title "$GITHUB_REF_NAME" --generate-notes
+          fi
