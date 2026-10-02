@@ -1,6 +1,6 @@
 # Zoomer
 
-A VSCode extension which allows for finely tuned zoom levels.
+An extension which allows for finely tuned zoom levels.
 
 ## Motivation
 
