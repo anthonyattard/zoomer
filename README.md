@@ -60,9 +60,11 @@ Head to Zoomer settings in Code and set your custom zoom factor!
 
 ### Publishing
 
-- To build vsix (local only): `pnpm dlx @vscode/vsce package`
+Releases are published to the VS Code Marketplace and Open VSX by the [Release workflow](.github/workflows/release.yml) when a version tag is pushed.
 
-- To Publish:
-  - Major `pnpm dlx @vscode/vsce publish major`
-  - Minor `pnpm dlx @vscode/vsce publish minor`
-  - Patch `pnpm dlx @vscode/vsce publish patch`
+1. Bump `version` in `package.json` and add a matching `## [x.y.z]` section to `CHANGELOG.md`
+2. Commit, then tag and push: `git tag vx.y.z && git push origin master vx.y.z`
+
+The tag must match the `package.json` version. The workflow attaches the `.vsix` to a GitHub release, using the changelog section as release notes.
+
+- To build vsix (local only): `pnpm dlx @vscode/vsce package --no-dependencies`
