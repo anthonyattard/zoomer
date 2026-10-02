@@ -63,7 +63,7 @@ Head to Zoomer settings in Code and set your custom zoom factor!
 Releases are published to the VS Code Marketplace and Open VSX by the [Release workflow](.github/workflows/release.yml) when a version tag is pushed.
 
 1. Bump `version` in `package.json` and add a matching `## [x.y.z]` section to `CHANGELOG.md`
-2. Commit, then tag and push: `git tag vx.y.z && git push origin master vx.y.z`
+2. Commit, push branch, merge, pull down master, then tag and push: `git tag vx.y.z && git push origin master vx.y.z`
 
 The tag must match the `package.json` version. The workflow attaches the `.vsix` to a GitHub release, using the changelog section as release notes.
 
