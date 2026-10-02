@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.3.5] 2026-10-02
 
+- Update deps
+
+## [0.3.5] 2026-10-02
+
 - Add pipeline
 
 ## [0.3.4] 2025-08-19
